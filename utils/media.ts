@@ -5,7 +5,8 @@ interface Constraints {
 };
 
 const openMediaDevices = async (constrains:Constraints) => {
-  return await navigator.mediaDevices.getUserMedia(constrains);
+  const devices = await navigator.mediaDevices.getUserMedia(constrains)
+  return devices
 };
 
 export {
